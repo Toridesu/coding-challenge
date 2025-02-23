@@ -1,4 +1,5 @@
 import { ChevronLeft } from "lucide-react";
+import TestResults from "./TestResults";
 import { Card } from "./ui/card";
 import { Challenge, TestResult } from "@/types/challenges";
 
@@ -39,7 +40,7 @@ const ChallengeDetail = (props: ChallengeDetailProps) => {
           </details>
         </Card>
       </div>
-      {/* TestResults */}
+      <TestResults results={props.results} />
     </div>
   );
 };
