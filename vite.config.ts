@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: process.env.GITHUB_PAGES ? "/coding-challenge" : "./",
+  base: process.env.GITHUB_PAGES ? '/coding-challenge' : '/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
