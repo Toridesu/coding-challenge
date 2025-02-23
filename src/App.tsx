@@ -1,19 +1,11 @@
-import { Button } from './components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader } from './components/ui/card';
-import { Textarea } from './components/ui/textarea';
+import { CodeEditor } from './components/CodeEditor';
+import HomeSection from './components/Home';
 
-function App() {
+export default function App() {
   return (
-    <Card className='w-96'>
-      <CardHeader>shadcn/uiの表示確認</CardHeader>
-      <CardContent>
-        <Textarea />
-      </CardContent>
-      <CardFooter>
-        <Button>Submit</Button>
-      </CardFooter>
-    </Card>
+    <div className='min-h-screen grid grid-cols-2'>
+      <HomeSection onChallengeSelect={(id) => console.log(id)} />
+      <CodeEditor currentChallenge={undefined} onRun={(code) => console.log(code)} />
+    </div>
   );
 }
-
-export default App;
